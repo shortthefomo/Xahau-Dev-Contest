@@ -1,0 +1,40 @@
+{
+  "name": "setup-token",
+  "version": "0.0.1",
+  "description": "learning",
+  "main": "src/index.js",
+  "scripts": {
+    "xahau": "DEBUG=main* nodemon src/index.js",
+    "xrpl": "DEBUG=main* nodemon src/index_xrpl.js",
+    "prod": "DEBUG=main* node src/index.js"
+  },
+  "author": "Lathan Britz",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "@pm2/io": "^6.1.0",
+    "@transia/xrpl": "^2.7.3-alpha.28",
+    "axios": "^1.7.7",
+    "ccxt": "^4.4.31",
+    "cors-anywhere": "^0.4.4",
+    "debug": "^4.3.7",
+    "decimal.js": "^10.4.3",
+    "dotenv": "^16.4.5",
+    "events": "^3.3.0",
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "mkcert": "^3.2.0",
+    "mysql2": "^3.11.4",
+    "node-cache": "^5.1.2",
+    "play-sound": "^1.1.6",
+    "say": "^0.16.0",
+    "ws": "^8.18.0",
+    "xrpl": "^4.1.0",
+    "xrpl-client": "^2.4.0",
+    "xumm-sdk": "^1.11.2"
+  }
+}
