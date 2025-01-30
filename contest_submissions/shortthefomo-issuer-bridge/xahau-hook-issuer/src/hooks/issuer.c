@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 #define NOPE(x) rollback(SBUF(x), __LINE__)
-#define MIN_LEDGER_LIMIT 50     // 21600 is 1 day, 324000 ledger is 15 days. Changed to 50 ledger for testing
+#define MIN_LEDGER_LIMIT 21600     // 21600 is 1 day, 324000 ledger is 15 days. Changed to 50 ledger for testing
 #define MAX_LEDGER_LIMIT 648000 // 30 days
 #define ttPAYMENT 0
 
@@ -51,10 +51,10 @@ int64_t hook(uint32_t reserved ) {
         NOPE("Issuance: Misconfigured L, not set as Hook Parameter");
 
     if (float_int(ledger_param, 0, 1) < MIN_LEDGER_LIMIT)
-        NOPE("Issuance: Ledger limit must be greater than 324,000(15 days).");
+        NOPE("Issuance: Ledger limit must be greater than 21600(1 day).");
 
     if (float_int(ledger_param, 0, 1) > MAX_LEDGER_LIMIT)
-        NOPE("Issuance: Ledger limit less than 7,884,000(365 days).");        
+        NOPE("Issuance: Ledger limit less than 648,000 (30 days).");        
 
 
     // the supply cap to issue via this hook
