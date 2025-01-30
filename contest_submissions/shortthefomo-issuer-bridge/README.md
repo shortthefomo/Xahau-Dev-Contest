@@ -1,8 +1,11 @@
 # Xahau Issuer Hook and Evernode Bridge
 
-Basic idea, is to have a front end (not delivered here as this is a POC) that would allow a user on the network to scan a QR code. Which would then trigger these to bedeployed into the network.
-1. createing them a new token
-2. deploys a bridge for the token
+Basic idea, is to have a front end (not delivered here as this is a POC) that would allow a user on the network to scan a QR code. Which would then trigger these to be deployed into the network.
+1. creating them a new token
+2. attaching the hook to the issuer
+3. deploys a bridge for the token
+
+As users now move tokens from one network to the other, the hook controlls the issuance of new tokens into the network. Evertime value is returned to the issuer, it then reissues more tokens at the intervals defined on the hook and up to the supply cap set. Now to get users todo that interaction they are provided with a bridge. This allows them to move tokens from one network to the other, as this is a bi-directional bridge.
 
 
 ## Xahau Issuer Hook
