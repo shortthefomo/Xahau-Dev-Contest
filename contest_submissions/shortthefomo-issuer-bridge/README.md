@@ -7,6 +7,7 @@ Basic idea, is to have a front end (not delivered here as this is a POC) that wo
 
 As users now move tokens from one network to the other, the hook controlls the issuance of new tokens into the network. Evertime value is returned to the issuer, it then reissues more tokens at the intervals defined on the hook and up to the supply cap set. Now to get users todo that interaction they are provided with a bridge. This allows them to move tokens from one network to the other, as this is a bi-directional bridge.
 
+So in effect if users dont use the bridge no new value is created. But if they do the idea is then to get the bridge to fund its self and running of the bridge.
 
 ## Xahau Issuer Hook
 This hooks purpose is to issue a token to a network, define the supply cap and independently issue new tokens to a hot wallet (later on these tokens should be used to build liquidity the AMM a future body of work).
