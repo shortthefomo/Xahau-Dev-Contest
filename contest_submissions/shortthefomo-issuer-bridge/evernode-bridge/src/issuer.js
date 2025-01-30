@@ -47,9 +47,9 @@ export class issuer {
                     const send_token_tx = {
                         'TransactionType': 'Payment',
                         'Account': xahau_cold_wallet.address,
-                        'DeliverMax': transaction.Amount,
+                        'Amount': transaction.Amount,
                         'Destination':  transaction.Account,
-                        'SourceTag': XAHAU_DESTINATION_TAG,
+                        'SourceTag': XRPL_DESTINATION_TAG,
                         'NetworkID': NetworkID
                     }
 
@@ -66,9 +66,6 @@ export class issuer {
                         throw `Error sending transaction: ${pay_result.result.meta.TransactionResult}`
                     }
                 }
-                else if ('error' in ledger_result.result) {
-                    
-                }
                 else {
                     for (let index = 0; index < ledger_result.result.lines.length; index++) {
                         const line = ledger_result.result.lines[index]
@@ -77,7 +74,7 @@ export class issuer {
                         const send_token_tx = {
                             'TransactionType': 'Payment',
                             'Account': xrpl_cold_wallet.address,
-                            'DeliverMax': transaction.Amount,
+                            'Amount': transaction.Amount,
                             'Destination':  transaction.Account,
                             'SourceTag': XAHAU_DESTINATION_TAG
                         }
@@ -119,7 +116,7 @@ export class issuer {
                         'Account': xrpl_cold_wallet.address,
                         'Amount': transaction.meta.delivered_amount,
                         'Destination': transaction.tx_json.Account,
-                        'SourceTag': XRPL_DESTINATION_TAG
+                        'SourceTag': XAHAU_DESTINATION_TAG
                     }
 
                     const pay_prepared = await client_xrpl.autofill(send_token_tx)
