@@ -13,11 +13,11 @@ Setting up of accounts and trustlines needs to be perfromed before hand. In the 
 
 Next one then needs to install the hook in the hook-issuer project. With the following paramters, using the cold wallet you had setup in the previous step. 
 This hook has 5 parameters.
-H - hot wallet, the account we are issuing a new token to
-A - amount, the amount that is issued at each interval
-L - ledgers, the number of ledgers to pass before allowing further issuance
-SC - supply cap, the supply cap this hook will issue tokens up to before stopping
-C - currency, the currency code 
+- H - hot wallet, the account we are issuing a new token to
+- A - amount, the amount that is issued at each interval
+- L - ledgers, the number of ledgers to pass before allowing further issuance
+- SC - supply cap, the supply cap this hook will issue tokens up to before stopping
+- C - currency, the currency code 
 
 
 With this you now are left with x4 accounts 
