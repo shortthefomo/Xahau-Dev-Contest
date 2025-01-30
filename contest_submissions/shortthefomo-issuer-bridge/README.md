@@ -63,8 +63,10 @@ Hope is to continue this work through the year.
 
 
 ## Video 
-TODO---
-
+[Issue Token Setup](https://youtu.be/_Y-9j9-8PNU)
+[Hook Code Walk Through](https://youtu.be/NP_3RB4gnUc)
+[Evernode Code Walk Through](https://youtu.be/qXDX_pPUQ40)
+[Example Flow](https://youtu.be/FwjQdOe_aM4)
 
 
 ## Disclaimer
