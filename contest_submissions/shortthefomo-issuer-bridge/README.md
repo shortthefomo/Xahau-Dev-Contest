@@ -53,7 +53,7 @@ The contract will also return a value if the user enters an unknown destination 
 Assumptions that still need work on.
 - xPOP additional part should use a xPOP at each bridge transaction.
 - multisi there was not enough time to add this functionality in but ive commented in the code and linked off to a previous example ive done so with https://github.com/shortthefomo/mycontract/blob/71db56ec9d9fc76bde1c0aac188f00368a3c5904/src/mycontract.js#L150 .
-- build custom evernode container other work im busy with so that the contract does not rely on external nodes but is self sufficient.
+- build custom  Evernode container that houses XAHAU and XRPL submission nodes, other work im busy with so that the contract does not rely on external nodes but is self sufficient.
 
 Hope is to continue this work through the year.
 
