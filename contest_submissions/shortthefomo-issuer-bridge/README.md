@@ -5,15 +5,17 @@ Basic idea, is to have a front end (not delivered here as this is a POC) that wo
 2. attaching the hook to the issuer
 3. deploys a bridge for the token
 
-As users now move tokens from one network to the other, the hook controlls the issuance of new tokens into the network. Evertime value is returned to the issuer, it then reissues more tokens at the intervals defined on the hook and up to the supply cap set. Now to get users todo that interaction they are provided with a bridge. This allows them to move tokens from one network to the other, as this is a bi-directional bridge.
+As users now move tokens from one network to the other, the hook controls the issuance of new tokens into the network. Every time value is returned to the issuer, it then reissues more tokens at the intervals defined on the hook and up to the supply cap set. Now to get users todo that interaction they are provided with a bridge. This allows them to move tokens from one network to the other, as this is a bi-directional bridge.
 
 So in effect if users dont use the bridge no new value is created. But if they do the idea is then to get the bridge to fund its self and running of the bridge.
+
+[https://x.com/ShortTheFOMO/status/1885031391399714951] (Video of example transactions via Xaman wallet)
 
 ## Xahau Issuer Hook
 This hooks purpose is to issue a token to a network, define the supply cap and independently issue new tokens to a hot wallet (later on these tokens should be used to build liquidity the AMM a future body of work).
 
 ### Installation
-Setting up of accounts and trustlines needs to be perfromed before hand. In the hook-issuer project folder there are two sccripts todo so run `yarn xahau` and `yarn xrpl`. You are required to create x4 accounts on both networks XRPL-TESTNET and XAHAU-TESTNET. The code would need to have those secrets used before running the account step.
+Setting up of accounts and trustlines needs to be performed before hand. In the hook-issuer project folder there are two scripts todo so run `yarn xahau` and `yarn xrpl`. You are required to create x4 accounts on both networks XRPL-TESTNET and XAHAU-TESTNET. The code would need to have those secrets used before running the account step.
 
 Next one then needs to install the hook in the hook-issuer project. With the following paramters, using the cold wallet you had setup in the previous step. 
 This hook has 5 parameters.
@@ -35,11 +37,11 @@ With this you now are left with x4 accounts
 ## Evernode Bridge
 This Evernode Contracts job is to facilitate the moving of tokens from one network to another this example is using XRPL and XAHAU, however othe networks that can issue tokens could be substituted.
 
-This is not a deployable contract into the network at this point as it is still far to rudementory at this stage. You will need to install hpdevkit https://docs.evernode.org/en/latest/sdk/hotpocket/hpdevkit/overview.html
+This is not a deployable contract into the network at this point as it is still far to rudimentary at this stage. You will need to install hpdevkit https://docs.evernode.org/en/latest/sdk/hotpocket/hpdevkit/overview.html
 
 
 ### Installation
-First one needs to update the keys used in the srouce code in evernode-bridge in the files issuer.js and bridge.js to those you used and created for the hook. We are using the fact that a users rAddress is the same on both networks here (complicates other networks).
+First one needs to update the keys used in the source code in evernode-bridge in the files issuer.js and bridge.js to those you used and created for the hook. We are using the fact that a users rAddress is the same on both networks here (complicates other networks).
 
 Next in that project folder run 
 ```
@@ -53,7 +55,6 @@ What this now does is when users of this token sends back tokens to the issuer o
 
 The contract will also return a value if the user enters an unknown destination tag.
 
-
 Assumptions that still need work on.
 - xPOP additional part should use a xPOP at each bridge transaction.
 - multisi there was not enough time to add this functionality in but ive commented in the code and linked off to a previous example ive done so with https://github.com/shortthefomo/mycontract/blob/71db56ec9d9fc76bde1c0aac188f00368a3c5904/src/mycontract.js#L150 .
@@ -61,12 +62,22 @@ Assumptions that still need work on.
 
 Hope is to continue this work through the year.
 
-
 ## Video 
 [Issue Token Setup](https://youtu.be/_Y-9j9-8PNU)
 [Hook Code Walk Through](https://youtu.be/NP_3RB4gnUc)
 [Evernode Code Walk Through](https://youtu.be/qXDX_pPUQ40)
 [Example Flow](https://youtu.be/FwjQdOe_aM4)
+
+
+##Tweets
+
+First Mandatory Tweet announcing your participation:
+
+Link to Tweet: [https://x.com/shortthefomo/status/1882487499366560095?s=46](https://x.com/shortthefomo/status/1882487499366560095?s=46)
+
+Second Mandatory Tweet upon submission for final review:
+Link to Tweet: [https://x.com/shortthefomo/status/1884982622754881618?s=46](https://x.com/shortthefomo/status/1884982622754881618?s=46)
+
 
 
 ## Disclaimer
